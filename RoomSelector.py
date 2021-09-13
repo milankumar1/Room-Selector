@@ -35,7 +35,12 @@ people = ["lucy", "Olivia", "Tom","Rosa","Luke","Rory", "Kismat", "Kieron", "Mil
 """each entry in mat are each persons rankings of rooms 1 to 10. 
 here Lucys entries are 8,7,1,2,6,9,10,5,3,4
  1 is for 1st so 1 is best, 10 is worst. 
-Liv's are the enxt set of 10 and so on."""
+Liv's are the next set of 10 and so on."""
+"""
+for rooms out of budget they were given a rank of 100 so they cant get thos rooms. 
+to keep it fair these rankings were changed from the middle not the end
+so the remaining top ranked toom is still 1, and bottom ranked room still 10 instead of 9
+"""
 
 mat = [[8,7,1,2,6,9,10,5,3,4],[4,5,1,2,6,9,10,7,3,8],[3,8,1,2,7,9,10,6,4,5],[9,7,10,8,3,5,6,1,4,2],[4,7,2,1,8,9,10,6,5,3],
        [4,7,3,2,6,8,9,10,5,1],[2,8,100,1,9,7,5,10,4,3], [100, 3, 100,100,9,1,2,10,100,100], [5,7,8,4,3,9,10,6,2,1], [4,8,3,1,5,7,10,6,9,2]  ]
