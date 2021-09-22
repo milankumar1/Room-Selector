@@ -6,6 +6,8 @@ Created on Wed Sep 15 14:31:03 2021
 """
 import numpy as np
 import random
+import xlrd
+
 
 # finds the best paths recursively after generating the permutation matrix indexes
 
@@ -39,10 +41,22 @@ def permTot (path):
     return Tot
 
 
-#read ranking matrix from file function 
+#read ranking matrix from an excel file
 
 def ReadMat ():
-    print("feature to be implemented soon try again")
+    loc = (r"C:\Users\milan\OneDrive\Documents\GitHub\Room-Selector\rankingSheet.xlsx")
+    wb = xlrd.open_workbook(loc)
+    sheet = wb.sheet_by_index(0)
+    
+    people = sheet.col_values(0, start_rowx = 1) 
+    Mat = []
+    RoomsNum = sheet.nrows -1
+    
+    for i in range (1, RoomsNum+1):
+        ranking = sheet.row_values(i, start_colx = 1)
+        Mat.append(ranking)
+    return RoomsNum, people, Mat
+
 
 # input ranking matrix function
 
